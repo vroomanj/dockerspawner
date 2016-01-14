@@ -1,11 +1,7 @@
-# Build as jupyter/systemuser
-# Run with the DockerSpawner in JupyterHub
+FROM vroomanj/notebook:latest
 
-FROM jupyter/scipy-notebook
+MAINTAINER Justin Vrooman <vroomanj@egr.msu.edu>
 
-MAINTAINER IPython Project <ipython-dev@scipy.org>
-
-# fetch juptyerhub-singleuser entrypoint
 ADD https://raw.githubusercontent.com/jupyter/jupyterhub/master/jupyterhub/singleuser.py /usr/local/bin/jupyterhub-singleuser
 RUN chmod 755 /usr/local/bin/jupyterhub-singleuser
 
