@@ -2,7 +2,7 @@
 
 echo "Creating user $USER ($USER_ID)"
 useradd -u $USER_ID -s $SHELL $USER
-sudo -E -u $USER jupyterhub-singleuser \
+sudo -E -u $USER /usr/local/bin/jupyterhub-singleuser \
   --port=8888 \
   --ip=0.0.0.0 \
   --user=$JPY_USER \
